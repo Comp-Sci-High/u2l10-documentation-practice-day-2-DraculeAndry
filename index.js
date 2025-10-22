@@ -15,8 +15,16 @@
 // -----------------------------------------------------
 // CALL IT
 
+let requestUrl = 'http://api.open-notify.org/astros.json'
 
+async function fetchPeopleInSpace(requestUrl) {
+    const response = await fetch(url)
+    const data = await response.json()
+    console.log(data)
+    return data
+}
 
+fetchPeopleInSpace[7](requestUrl)
 
 // -----------------------------------------------------
 // TASK 2: NASA Astronomy Picture of the Day (APOD)
@@ -32,10 +40,16 @@
 // -----------------------------------------------------
 // CALL IT
 
+let requestUrl2 = "https://api.nasa.gov/api_key=osdCf63BTbVQjxm7BkLyQ70oN1gKpGftg8Bb56ee&?date=today"
 
+async function fetchAPOD(url) {
+    const response = await fetch(url)
+    const data = await response.json()
+    console.log(data)
+    return data
+}
 
-
-
+fetchAPOD(url)
 // -----------------------------------------------------
 // TASK 3: NASA Mars Rover Photos
 // API: NASA Mars Rover Photos
@@ -52,10 +66,16 @@
 // -----------------------------------------------------
 // CALL IT
 
+let requestUrl3 = "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/date=today&?api_key=osdCf63BTbVQjxm7BkLyQ70oN1gKpGftg8Bb56ee"
 
+async function fetchMarsPhotos(url) {
+    const response = await fetch(url)
+    const data = await response.json()
+    console.log(data)
+    return data
+}
 
-
-
+fetchMarsPhotos(url)
 // -----------------------------------------------------
 // TASK 4: NASA Image and Video Library
 // API: NASA Image and Video Library
@@ -71,7 +91,15 @@
 // -----------------------------------------------------
 // CALL IT
 
+let requestUrl4 = "https://images-api.nasa.gov/search?q=uranus"
 
+async function fetchNasaImage(url) {
+    const response = await fetch(url)
+    const data = await response.json()
+    console.log(data)
+    return data
+}
 
+fetchNasaImage(url)
 
 
